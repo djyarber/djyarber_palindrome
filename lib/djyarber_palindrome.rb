@@ -2,7 +2,8 @@
 
 require_relative "djyarber_palindrome/version"
 
-class String
+# class String
+module DjyarberPalindrome
   # Returns true for a palindrome, false otherwise.
   def palindrome?
     processed_content == processed_content.reverse
@@ -12,6 +13,14 @@ class String
 
   # Returns content for palindrome testing.
   def processed_content
-    scan(/[a-z]/i).join.downcase
+    to_s.scan(/[a-z0-9]/i).join.downcase
   end
+end
+
+class String
+  include DjyarberPalindrome
+end
+
+class Integer
+  include DjyarberPalindrome
 end
