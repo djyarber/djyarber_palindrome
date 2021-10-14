@@ -24,7 +24,7 @@ gem install djyarber_palindrome
 
 ## Usage
 
-`djyarber_palindrome` adds a `palindrome?` method to the `String` class, and can be used as follows:
+`djyarber_palindrome` adds a `palindrome?` method to the `String` and `Integer` classes, and can be used as follows:
 
 ```ruby
 $ irb
@@ -46,6 +46,14 @@ Run tests:
 
 ```sh
 bundle exec rake test
+```
+
+Release new version:
+
+Update the version number in `version.rb`, then run
+
+```sh
+bundle exec rake release
 ```
 
 ## License
