@@ -6,6 +6,7 @@ require_relative "djyarber_palindrome/version"
 module DjyarberPalindrome
   # Returns true for a palindrome, false otherwise.
   def palindrome?
+    return false if processed_content.empty?
     processed_content == processed_content.reverse
   end
 
